@@ -15,5 +15,4 @@ The Mac Task Bar is the ultimate experience, designed for performance and power 
     
 **Known issues:**
 - Resizing of adobe photoshop not working 
-- Overflow of tiles not handled
 - Unneccessary windows like when you press cmf+f in chrome should not be displayed
