@@ -1,6 +1,5 @@
 name: Bug report
 description: Report a reproducible crash, display, or taskbar problem
-title: "[Bug]: "
 body:
   - type: markdown
     attributes:
