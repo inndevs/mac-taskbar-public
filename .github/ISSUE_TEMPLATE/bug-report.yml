@@ -6,10 +6,6 @@ body:
       value: |
         Thanks for helping improve Mac Taskbar.
 
-        In Mac Taskbar, open **Settings > Info > Support Diagnostics** and choose **Copy Diagnostics**. Paste that text into **Support Diagnostics & Attachments** below. For crashes, **Export Diagnostics...** can also create a ZIP containing the diagnostics and, with your approval, the crash report.
-
-        Diagnostics are designed to omit window titles, application lists, folder paths, display serial numbers, and license information. A crash report can still contain personal data, so please inspect it before attaching it to this public issue.
-
   - type: dropdown
     id: problem-type
     attributes:
@@ -53,6 +49,13 @@ body:
         - Once
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        In Mac Taskbar, open **Settings > Info > Support Diagnostics** and choose **Copy Diagnostics**. Paste that text into **Support Diagnostics & Attachments** below. For crashes, **Export Diagnostics...** can also create a ZIP containing the diagnostics and, with your approval, the crash report.
+
+        Diagnostics are designed to omit window titles, application lists, folder paths, display serial numbers, and license information. A crash report can still contain personal data, so please inspect it before attaching it to this public issue.
 
   - type: textarea
     id: diagnostics
