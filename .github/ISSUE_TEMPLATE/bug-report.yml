@@ -6,7 +6,7 @@ body:
       value: |
         Thanks for helping improve Mac Taskbar.
 
-        In Mac Taskbar, open **Settings > Info > Support Diagnostics** and choose **Copy Diagnostics**. Paste that text below. For crashes, **Export Diagnostics...** can also create a ZIP containing the diagnostics and, with your approval, the crash report.
+        In Mac Taskbar, open **Settings > Info > Support Diagnostics** and choose **Copy Diagnostics**. Paste that text into **Support Diagnostics & Attachments** below. For crashes, **Export Diagnostics...** can also create a ZIP containing the diagnostics and, with your approval, the crash report.
 
         Diagnostics are designed to omit window titles, application lists, folder paths, display serial numbers, and license information. A crash report can still contain personal data, so please inspect it before attaching it to this public issue.
 
@@ -57,12 +57,4 @@ body:
   - type: textarea
     id: diagnostics
     attributes:
-      label: Support Diagnostics
-      description: Paste the output from Settings > Info > Support Diagnostics > Copy Diagnostics. It automatically includes app and macOS versions, taskbar and Dock orientations, DisplayLink status, and display setup and hardware details. If that feature is unavailable in your version, leave this blank.
-      render: shell
-
-  - type: textarea
-    id: attachments
-    attributes:
-      label: Attachments
-      description: Drag the exported diagnostics ZIP, crash report, screenshot, or short screen recording here. Inspect crash reports before sharing them publicly.
+      label: Support Diagnostics & Attachments
