@@ -1,0 +1,145 @@
+name: Bug report
+description: Report a reproducible crash, display, or taskbar problem
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Mac Taskbar.
+
+        In Mac Taskbar, open **Settings > Info > Support Diagnostics** and choose **Copy Diagnostics**. Paste that text below. For crashes, **Export Diagnostics...** can also create a ZIP containing the diagnostics and, with your approval, the crash report.
+
+        Diagnostics are designed to omit window titles, application lists, folder paths, display serial numbers, and license information. A crash report can still contain personal data, so please inspect it before attaching it to this public issue.
+
+  - type: dropdown
+    id: problem-type
+    attributes:
+      label: Problem type
+      options:
+        - Crash or unexpected quit
+        - Freeze or high CPU usage
+        - Display or layout problem
+        - Window or taskbar behavior
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Include what you expected to happen and what happened instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time
+        - Often
+        - Sometimes
+        - Once
+    validations:
+      required: true
+
+  - type: input
+    id: crash-time
+    attributes:
+      label: Approximate time of the problem
+      description: Especially useful for matching a crash or log entry. Include your time zone.
+      placeholder: "2026-07-15 14:30 Europe/Zurich"
+
+  - type: input
+    id: app-version
+    attributes:
+      label: Mac Taskbar version
+      placeholder: "2.2.4"
+    validations:
+      required: true
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      placeholder: "macOS 15.5 (24F74)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: taskbar-orientation
+    attributes:
+      label: Mac Taskbar orientation
+      options:
+        - Bottom
+        - Top
+        - Left
+        - Right
+    validations:
+      required: true
+
+  - type: dropdown
+    id: dock-orientation
+    attributes:
+      label: Apple Dock orientation
+      options:
+        - Bottom
+        - Left
+        - Right
+        - Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: display-setup
+    attributes:
+      label: Display setup
+      description: Describe the number of displays, their arrangement, and which display is affected.
+      placeholder: "MacBook display below one external 4K display; external display is affected"
+    validations:
+      required: true
+
+  - type: input
+    id: display-software
+    attributes:
+      label: Display software or hardware
+      description: Include DisplayLink Manager and its version, a dock model, or similar components if used.
+      placeholder: "DisplayLink Manager 1.x with ... dock"
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Support Diagnostics
+      description: Paste the output from Settings > Info > Support Diagnostics > Copy Diagnostics. If that feature is unavailable in your version, leave this blank.
+      render: shell
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments
+      description: Drag the exported diagnostics ZIP, crash report, screenshot, or short screen recording here. Inspect crash reports before sharing them publicly.
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I inspected any attached crash report or diagnostics ZIP and am comfortable sharing its contents publicly.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add anything else that may help reproduce or diagnose the problem.
